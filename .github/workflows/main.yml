@@ -15,12 +15,6 @@ jobs:
     steps:
       - name: Checkout the code
         uses: actions/checkout@v4
-      - name: Download APKeep
-        run: wget https://github.com/EFForg/apkeep/releases/download/0.17.0/apkeep-x86_64-linux-android
-      - name: Update file permissions
-        run: chmod 777 apkeep-x86_64-linux-android
-      - name: Download apk
-        run: ls
       - name: Execute exodus-standalone
         uses: docker://exodusprivacy/exodus-standalone:v1.4.0
         with:
