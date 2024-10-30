@@ -20,7 +20,7 @@ jobs:
       - name: Update file permissions
         run: chmod 777 apkeep-x86_64-linux-android
       - name: Download apk
-        run: apkeep-x86_64-linux-android -a com.coloros.note ./
+        run: .apkeep-x86_64-linux-android -a com.coloros.note ./
       - name: Execute exodus-standalone
         uses: docker://exodusprivacy/exodus-standalone:v1.4.0
         with:
