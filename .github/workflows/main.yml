@@ -18,4 +18,4 @@ jobs:
       - name: Execute exodus-standalone
         uses: docker://exodusprivacy/exodus-standalone:v1.4.0
         with:
-          args: /github/workspace/app.apk
+          args: /github/workspace/apk/app.apk
