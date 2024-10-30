@@ -17,6 +17,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Download APKeep
         run: wget https://github.com/EFForg/apkeep/releases/download/0.17.0/apkeep-x86_64-linux-android
+      - name: Update file permissions
+        run: chmod 777 apkeep-x86_64-linux-android
       - name: Download apk
         run: ./apkeep-x86_64-linux-android -a com.coloros.note ./
       - name: Execute exodus-standalone
