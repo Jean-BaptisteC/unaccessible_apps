@@ -16,7 +16,7 @@ jobs:
       - name: Checkout the code
         uses: actions/checkout@v4
       - name: Download apk
-        run: wget -cO - https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=7510802&key=a1efa5aebcc89fd1350e40835b2fe79e046d729a > app.apk
+        run: curl https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=7510802&key=a1efa5aebcc89fd1350e40835b2fe79e046d729a
       - name: Execute exodus-standalone
         uses: docker://exodusprivacy/exodus-standalone:v1.4.0
         with:
